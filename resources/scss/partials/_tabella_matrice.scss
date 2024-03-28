@@ -1,0 +1,44 @@
+// <div class="arcana"></div>
+// <div class="talento-giorno"></div>
+// <div class="talento-mese"></div>
+// <div class="debito-karmico"></div>
+// <div class="soul-task"></div>
+.base-matrice{
+    position: relative;
+    div{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size:2em;
+        text-align: center;
+        font-weight: medium;
+        color: white;
+    }
+}
+.arcana{
+    top: 51%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.talento-mese{
+    top: 12%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.talento-giorno{
+    top: 51%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+}
+
+.debito-karmico{
+    bottom: 4%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.soul-task{
+    top: 51%;
+    right: 4%;
+    transform: translate(-50%, -50%);
+}
