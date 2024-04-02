@@ -1,11 +1,7 @@
-// <div class="arcana"></div>
-// <div class="talento-giorno"></div>
-// <div class="talento-mese"></div>
-// <div class="debito-karmico"></div>
-// <div class="soul-task"></div>
+
 .base-matrice{
     position: relative;
-    div{
+    .main{
         position: absolute;
         width: 50px;
         height: 50px;
@@ -15,8 +11,30 @@
         font-weight: medium;
         color: white;
     }
+    .secondary{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size:1em;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+    }
+    .terzi{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size:0.9em;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+    }
 }
+// posizioni main
 .arcana{
+    color: black !important;
     top: 51%;
     left: 49%;
     transform: translate(-50%, -50%);
@@ -40,5 +58,173 @@
 .soul-task{
     top: 51%;
     right: 4%;
+    transform: translate(-50%, -50%);
+}
+
+.female-line-top{
+    color: black !important;
+    top: 23%;
+    right: 16%;
+    transform: translate(-50%,-50%);
+}
+.male-line-top{
+    color: black !important;
+    top: 23%;
+    left: 20.5%;
+    transform: translate(-50%,-50%);
+}
+
+.male-line-bot{
+    color: black !important;
+    bottom: 15%;
+    right: 16%;
+    transform: translate(-50%,-50%);
+}
+.female-line-bot{
+    color: black !important;
+    bottom: 15%;
+    left: 20.5%;
+    transform: translate(-50%,-50%);
+}
+
+// posizioni secondary
+.arcana-secondary{
+    top: 52%;
+    left: 56.5%;
+    transform: translate(-50%, -50%);
+}
+.talento-mese-secondary{
+    color: white !important;
+    top: 20.5%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.talento-giorno-secondary{
+    color: white !important;
+    top: 52%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+}
+
+.debito-karmico-secondary{
+    bottom: 11.7%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.soul-task-secondary{
+    top: 52%;
+    right: 13%;
+    transform: translate(-50%, -50%);
+}
+
+.female-line-top-secondary{
+    color: black !important;
+    top: 30%;
+    right: 23%;
+    transform: translate(-50%,-50%);
+}
+.male-line-top-secondary{
+    color: black !important;
+    top: 30%;
+    left: 26%;
+    transform: translate(-50%,-50%);
+}
+
+.male-line-bot-secondary{
+    color: black !important;
+    bottom: 21%;
+    right: 23%;
+    transform: translate(-50%,-50%);
+}
+.female-line-bot-secondary{
+    color: black !important;
+    bottom: 21%;
+    left: 26%;
+    transform: translate(-50%,-50%);
+}
+
+// posizioni terzi
+.arcana-terzi{
+    top: 51.5%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+.talento-mese-terzi{
+    color: white !important;
+    top: 25%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.talento-giorno-terzi{
+    color: white !important;
+    top: 51.5%;
+    left: 21.5%;
+    transform: translate(-50%, -50%);
+}
+
+.debito-karmico-terzi{
+    color: white !important;
+    bottom: 18.4%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.soul-task-terzi{
+    color: white !important;
+    top: 52%;
+    right: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.female-line-top-terzi{
+    top: 33%;
+    right: 28%;
+    transform: translate(-50%,-50%);
+}
+.male-line-top-terzi{
+    top: 33%;
+    left: 29.5%;
+    transform: translate(-50%,-50%);
+}
+
+.male-line-bot-terzi{
+    bottom: 26%;
+    right: 28%;
+    transform: translate(-50%,-50%);
+}
+.female-line-bot-terzi{
+    bottom: 26%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+}
+
+//amore,mezzo,soldi
+
+.amore{
+    bottom: 25%;
+    left: 56%;
+    transform: translate(-50%,-50%);
+}
+.mezzo{
+    bottom: 31.7%;
+    right: 33.5%;
+    transform: translate(-50%,-50%);
+}
+.soldi{
+    bottom: 38%;
+    left: 69.5%;
+    transform: translate(-50%,-50%);
+}
+
+//green1 green2
+.green2{
+    color: white !important;
+    top: 37%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+.green1{
+    color: white !important;
+    top: 51.5%;
+    left: 34%;
     transform: translate(-50%, -50%);
 }
