@@ -45,6 +45,7 @@ document
     .addEventListener("submit", function (event) {
         event.preventDefault(); // Evita il comportamento predefinito del modulo
         var inputDate = document.getElementById("date").value; // Ottieni il valore della data
+        console.log(inputDate);
 
         // dati
         var date = new Date(inputDate); // Crea un oggetto Data dalla stringa di input
@@ -74,8 +75,34 @@ document
             return totnum; // Restituisci il valore calcolato
         }
 
+        function generaSequenzaNumeri(num1, num2) {
+            var risultati = [];
+            var somma1 = num1 + num2; // 6
+            var somma1 = reduce(somma1);
+            var somma2 = num1 + somma1; //16
+            var somma2 = reduce(somma2);
+            var somma3 = num2 + somma1; //20
+            var somma3 = reduce(somma3);
+            var somma4 = num1 + somma2; //26
+            var somma4 = reduce(somma4); //8
+            var somma5 = somma1 + somma2; //22
+            var somma5 = reduce(somma5); //22
+            var somma6 = somma1 + somma3;
+            var somma6=reduce(somma6); //8
+            var somma7 = somma3 + num2;
+            var somma7 = reduce(somma7);
+
+           risultati=[somma4,somma2, somma5, somma1, somma6, somma3, somma7];
+           var risultatoStringa = risultati.join('----');
+
+           return risultatoStringa;
+
+
+        }
+
+
         // main
-        var talentoGiorno = day;
+        var talentoGiorno = reduce(day);
         var talentoMese = month;
         var debitoKarmico =
             parseInt(day) + parseInt(month) + parseInt(totalYearSum);
@@ -83,6 +110,7 @@ document
         var totdebitoKarmico = reduce(debitoKarmico);
 
         var soulTask = totalYearSum;
+        var soulTask = reduce(soulTask);
         var sky = talentoGiorno + soulTask;
         var earth = talentoMese + totdebitoKarmico;
         var arcana = sky + earth;
@@ -195,6 +223,17 @@ document
         var totGreen2= 0;
         var totGreen2= reduce(green2);
 
+        //predizione numeri
+        var primaSezione = generaSequenzaNumeri(talentoGiorno, totmainMaleLineTop);
+        var Sezione2 = generaSequenzaNumeri(totmainMaleLineTop, talentoMese);
+        var Sezione3 = generaSequenzaNumeri(talentoMese, totmainFemaleLineTop);
+        var Sezione4 = generaSequenzaNumeri(totmainMaleLineTop, soulTask);
+        var Sezione5 = generaSequenzaNumeri(soulTask, totmainMaleLineBot);
+        var Sezione6 = generaSequenzaNumeri(totmainMaleLineBot, totdebitoKarmico);
+        var Sezione7 = generaSequenzaNumeri(totdebitoKarmico, totmainFemaleLineBot);
+        var Sezione8 = generaSequenzaNumeri(totmainFemaleLineBot, talentoGiorno);
+
+
         var total = day + month + year; // Somma il giorno, il mese e l'anno
         // main
         document.getElementById("talentoGiorno").innerText = talentoGiorno;
@@ -260,4 +299,23 @@ document
         totGreen1;
         document.getElementById("green2").innerText =
         totGreen2;
+
+        //predizione numeri futuro
+        document.getElementById("primaSezione").innerText =
+        primaSezione;
+        document.getElementById("Sezione2").innerText =
+        Sezione2;
+        document.getElementById("Sezione3").innerText =
+        Sezione3;
+        document.getElementById("Sezione4").innerText =
+        Sezione4;
+        document.getElementById("Sezione5").innerText =
+        Sezione5;
+        document.getElementById("Sezione6").innerText =
+        Sezione6;
+        document.getElementById("Sezione7").innerText =
+        Sezione7;
+        document.getElementById("Sezione8").innerText =
+        Sezione8;
+
     });

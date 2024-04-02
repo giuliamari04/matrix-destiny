@@ -3,16 +3,22 @@
 @section('content')
 
 <section>
-    <div>
+    <div class=" d-flex justify-content-center align-content-center align-items-center text-center py-5">
         <form action="" id="dateForm">
-        <label for="date" class=" form-label ">inserisci data di nascita</label>
-        <input type="date" class=" form-control w-25" name="date" id="date">
+        <label for="date" class=" form-label display-6 ">inserisci data di nascita</label>
+        <input type="date" class=" form-control w-50" name="date" id="date">
 
         <button type="submit" class="btn btn-primary ">Invia</button>
     </form>
     </div>
+          <div class=" d-flex justify-content-center align-content-center align-items-center text-center py-5">
+        <h1 class="display-3">Scopri la tua matrice del destino</h1>
+    </div>
+
     <div class="d-flex justify-content-center  align-content-center">
         <div class="base-matrice">
+            <div class="female">female generation line</div>
+            <div class="male">male generation line</div>
             <img src="{{ Vite::asset('/public/images/1689418337732.jpeg') }}" alt="matrice">
 
             {{-- arcani cerchi grandi | main --}}
@@ -57,15 +63,35 @@
              <div class="terzi female-line-bot-terzi" id="femaleLineBotterzi"></div>
              <div class="terzi male-line-bot-terzi" id="maleLineBotterzi"></div>
 
+             {{-- amore mezzo soldi --}}
              <div class="terzi amore" id="amore"></div>
              <div class="terzi mezzo"id="mezzo"></div>
              <div class="terzi soldi"id="soldi"></div>
 
+             {{-- green --}}
              <div class="terzi green1" id="green1"></div>
              <div class="terzi green2" id="green2"></div>
 
+             {{-- previsioni future --}}
+             <div class="prima-sezione" id="primaSezione">
+             </div>
+             <div class="sezione2" id="Sezione2">
+            </div>
+            <div class="sezione3" id="Sezione3">
+            </div>
+            <div class="sezione4" id="Sezione4">
+            </div>
+            <div class="sezione5" id="Sezione5">
+            </div>
+            <div class="sezione6" id="Sezione6">
+            </div>
+            <div class="sezione7" id="Sezione7">
+            </div>
+            <div class="sezione8" id="Sezione8">
+            </div>
+
+
         </div>
     </div>
-
 </section>
 @endsection

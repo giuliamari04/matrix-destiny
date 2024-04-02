@@ -1,6 +1,22 @@
 
 .base-matrice{
     position: relative;
+    .female{
+        position: absolute;
+        top: 40%;
+        left: 51%;
+        font-size: 0.8em;
+        color: black;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    .male{
+        position: absolute;
+        top: 40%;
+        right: 53%;
+        font-size: 0.8em;
+        color: black;
+        transform: translateY(-50%) rotate(45deg);
+    }
     .main{
         position: absolute;
         width: 50px;
@@ -31,7 +47,7 @@
         font-weight: medium;
         color: black;
     }
-}
+
 // posizioni main
 .arcana{
     color: black !important;
@@ -228,3 +244,103 @@
     left: 34%;
     transform: translate(-50%, -50%);
 }
+
+//prima sezione
+.prima-sezione{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        top: 35%;
+        left: -7%;
+        width: 250px;
+        transform: translateY(-50%) rotate(-67deg);
+
+}
+
+.sezione2{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        top: 12%;
+        left: 16.5%;
+        width: 250px;
+        transform: translateY(-50%) rotate(-23deg);
+
+}
+.sezione3{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        top: 12%;
+        right: 18.5%;
+        width: 250px;
+        transform: translateY(-50%) rotate(23deg);
+
+}
+.sezione4{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        top: 35%;
+        right: -5%;
+        width: 250px;
+        transform: translateY(-50%) rotate(67deg);
+
+}
+.sezione5{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        bottom: 30.5%;
+        right: -4.5%;
+        width: 250px;
+        transform: translateY(-50%) rotate(-247deg);
+
+}
+.sezione6{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        bottom: 7.5%;
+        right: 19.6%;
+        width: 250px;
+        transform: translateY(-50%) rotate(-23deg);
+
+}
+.sezione7{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        bottom: 7.5%;
+        left: 16.5%;
+        width: 250px;
+        transform: translateY(-50%) rotate(23deg);
+}
+.sezione8{
+    position: absolute;
+        text-align: center;
+        font-weight: medium;
+        color: black;
+        font-size: 0.7em;
+        bottom: 30.5%;
+        left: -7%;
+        width: 250px;
+        transform: translateY(-50%) rotate(247deg);
+
+}
+}
+
