@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-use App\Models\Post;
+use App\Models\Tarocchi;
 use App\Models\Category;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -12,16 +12,19 @@ use App\Http\Requests\UpdatePostRequest;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::all();
-        return view('admin.posts.index', compact('posts'));
+        $tarocchi = Tarocchi::all();
+         $talentoGiorno = $request->input('talentoGiorno');
+        // dd($talentoGiorno);
+        return view('admin.posts.index', compact('tarocchi','talentoGiorno'));
     }
 
     /**

@@ -1,5 +1,6 @@
 import "./bootstrap";
 import "~resources/scss/app.scss";
+import "./analisi";
 import * as bootstrap from "bootstrap";
 import.meta.glob(["../img/**", "../fonts/**"]);
 
@@ -39,6 +40,25 @@ import.meta.glob(["../img/**", "../fonts/**"]);
 //         document.getElementById("uploadPreview").src = oFREvent.target.result;
 //     };
 // });
+// Toggle the side navigation
+
+const sidebarToggle = document.body.querySelector("#sidebarToggle");
+if (sidebarToggle) {
+    // Uncomment Below to persist sidebar toggle between refreshes
+    // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+    //     document.body.classList.toggle('sb-sidenav-toggled');
+    // }
+    sidebarToggle.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        document.body.classList.toggle("sb-sidenav-toggled");
+        localStorage.setItem(
+            "sb|sidebar-toggle",
+            document.body.classList.contains("sb-sidenav-toggled")
+        );
+    });
+}
+
 
 document
     .getElementById("dateForm")
@@ -46,6 +66,15 @@ document
         event.preventDefault(); // Evita il comportamento predefinito del modulo
         var inputDate = document.getElementById("date").value; // Ottieni il valore della data
         console.log(inputDate);
+        var analisi = document.getElementById("analisi");
+
+        if (inputDate) {
+            analisi.classList.remove("d-none"); // Rimuove la classe "d-none"
+            analisi.classList.add("d-block"); // Aggiunge la classe "d-block" per mostrare l'elemento
+        } else {
+            analisi.classList.remove("d-block"); // Rimuove la classe "d-block"
+            analisi.classList.add("d-none"); // Aggiunge la classe "d-none" per nascondere l'elemento
+        }
 
         // dati
         var date = new Date(inputDate); // Crea un oggetto Data dalla stringa di input
@@ -237,6 +266,33 @@ document
         var total = day + month + year; // Somma il giorno, il mese e l'anno
         // main
         document.getElementById("talentoGiorno").innerText = talentoGiorno;
+        // Dati da inviare
+    var data = {
+        descrtalentoGiorno: talentoGiorno,
+        // Altri dati che desideri inviare
+    };
+    var options = {
+        method: 'POST', // Metodo della richiesta
+        headers: {
+            'Content-Type': 'application/json' // Tipo di contenuto della richiesta
+        },
+        body: JSON.stringify(data) // Dati da inviare convertiti in formato JSON
+    };
+     // Effettua la richiesta AJAX
+     fetch('/app/Http/Controllers/Admin/PostController.php', options)
+     .then(response => {
+         if (!response.ok) {
+             throw new Error('Errore nella richiesta.');
+         }
+         return response.json(); // Converte la risposta in formato JSON
+     })
+     .then(data => {
+         // Fai qualcosa con la risposta ricevuta
+         console.log(data);
+     })
+     .catch(error => {
+         console.error('Si è verificato un errore:', error);
+     });
         document.getElementById("talentoMese").innerText = talentoMese;
         document.getElementById("debitoKarmico").innerText = totdebitoKarmico;
         document.getElementById("soulTask").innerText = soulTask;
